@@ -24,6 +24,11 @@ form input{
   height: 30px;
 }
 
+p.error{
+  color: red;
+  margin: 0;
+}
+
 form .tos-container{
   display: flex;
 }
