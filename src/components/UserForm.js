@@ -3,11 +3,13 @@ import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
-function UserForm({ touched, errors, status }){
+function UserForm({ touched, errors, status, isSubmitting }){
     const [users, setUsers ] = useState([]);
+
     useEffect(() => {
         status && setUsers(users => [...users, status]);
     }, [status]);
+
     return(
         <div className='page'>
             <div className='form-container'>
@@ -51,7 +53,7 @@ function UserForm({ touched, errors, status }){
                         />
                         <p>Read terms of service</p>
                     </div>
-                    <button type='submit'>Submit</button>
+                    <button type='submit' disabled={isSubmitting}>Submit</button>
                 </Form>
             </div>
             <div className='current-users'>
