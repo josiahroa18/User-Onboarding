@@ -9,6 +9,7 @@
   text-align: center;
   padding: 50px;
   background-color: #FFCC99;
+  width: 30%;
 }
 
 form{
@@ -56,3 +57,21 @@ form button{
 form button:hover{
   cursor: pointer;
 }
+
+/* Display Users Styles */
+.current-users{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+}
+
+.current-users .user{
+  text-align: center;
+  background-color: teal;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+}
+

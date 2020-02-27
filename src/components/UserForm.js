@@ -55,8 +55,9 @@ function UserForm({ touched, errors, status }){
                 </Form>
             </div>
             <div className='current-users'>
+                <h1>Current Users</h1>
                 {users.map(user => {
-                    return <div key={user.id}>
+                    return <div key={user.id} className='user'>
                         <h3>{user.name}</h3>
                         <p>{user.email}</p>
                     </div>
